@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 
 // 2. Set the Database Connection String (Use Cloud DB if available, else local)
 // IMPORTANT: Replace <password> with your actual MongoDB password (no brackets)
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://SelveshStudyDock1:0703ss2006@cluster0.nvop5d0.mongodb.net/?appName=Cluster0";
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://SelveshStudyDock1:0703ss2006@cluster0.nvop5d0.mongodb.net/studydock?appName=Cluster0";
 
 // Increase limit for file uploads (Notes/Assignments/Profile Pics)
 app.use(bodyParser.json({ limit: '10mb' }));
@@ -223,4 +223,5 @@ app.post('/api/toggle-exam-results', async (req, res) => {
 });
 
 // --- LISTEN ON DYNAMIC PORT ---
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
